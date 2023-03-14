@@ -64,6 +64,10 @@ input:checked + .block-mem .button {
   padding-right: 0;
 }
 
+.block-mem:active {
+  opacity: 0.7;
+}
+
 @media (hover: hover) {
   .block-mem:hover {
     cursor: pointer;
