@@ -1,0 +1,187 @@
+* {
+  box-sizing: border-box;
+}
+
+input {
+  display: none;
+}
+
+.wrapper, .wrapper-content {
+  margin: 0 auto;
+}
+
+.header {
+  display: block;
+  font-size: 2rem;
+  font-weight: 900;
+}
+
+.block-content {
+  border-top: 0.125rem solid rgb(212, 208, 208);
+}
+
+.block-title {
+  display: flex;
+  justify-content: space-between;
+  transition: background-color 1s ease-out;
+}
+
+.title {
+  color: rgb(98, 98, 177);
+}
+
+.block-mem {
+  display: block;
+}
+
+.button {
+  opacity: 0;
+  padding-right: 0.8rem;
+  transition: opacity 1.5s ease-out, transform 0.2s ease-out;
+}
+
+.img-mem {
+  display: block;
+  margin: 0 auto;
+  width: 0;
+  opacity: 0;
+  transition: width 0.5s ease-in-out, opacity 1s ease-in-out;
+}
+
+input:checked + .block-mem .img-mem {
+  width: 70%;
+  padding-bottom: 2rem;
+  opacity: 1;
+}
+
+input:checked + .block-mem .title {
+  color: #000000;
+}
+
+input:checked + .block-mem .button {
+  transform: rotate(180deg);
+  padding-left: 0.8rem;
+  padding-right: 0;
+}
+
+.block-mem:active {
+  opacity: 0.7;
+}
+
+@media (hover: hover) {
+  .block-mem:hover {
+    cursor: pointer;
+  }
+
+  .block-mem:hover .block-title {
+    background-color: rgb(250, 250, 250);
+  }
+
+  .container-content:hover .button {
+    opacity: 1;
+  }
+  
+  .block-mem:hover .button {
+    transform: rotate(180deg);
+    padding-left: 0.8rem;
+    padding-right: 0;
+  }
+
+  .block-mem:hover .img-mem {
+    padding-bottom: 2rem;
+    width: 70%;
+    opacity: 1;
+  }
+
+  .container-content:hover .title {
+    color: #000000;
+  }
+}
+
+@media (hover: none) {
+  .button {
+    opacity: 1;
+  }
+}
+
+@media (min-width: 1420px) {
+  .wrapper {
+    max-width: 80%;
+  }
+
+  .wrapper-content {
+    width: 60%;
+  }
+
+  .header {
+    font-size: 2.5rem;
+    padding: 2.5rem 0 2.5rem 2rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .button {
+    font-size: 2rem;
+    line-height: 2.5rem;
+  }
+
+  .block-title {
+    padding: 2rem 0 2rem 2rem;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1419px) {
+  .wrapper {
+    max-width: 80%;
+  }
+
+  .wrapper-content {
+    width: 70%;
+  }
+
+  .header {
+    padding: 2rem 0 2rem 1.5rem;
+  }
+
+  .title {
+    font-size: 2rem;
+  }
+
+  .button {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .block-title {
+    padding: 1.5rem 0 1.5rem 1.5rem;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 767px) {
+  .wrapper {
+    max-width: 100%;
+  }
+
+  .wrapper-content {
+    width: 80%;
+  }
+
+  .header {
+    padding: 1.5rem 0 1.5rem 1rem;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .button {
+    font-size: 1.5rem;
+  }
+
+
+  .block-title {
+    padding: 1rem 0 1rem 1rem;
+  }
+}
